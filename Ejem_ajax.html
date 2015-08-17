@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		var peticion;
+		function iniciar(){
+			if(window.XMLHttpRequest)
+				peticion = new XMLHttpRequest();
+			else
+				peticion = new ActiveXObject('Microsoft.XMLHTTP');
+			}
+		function realizar_peticion(url,metodo,funcion)
+		{
+			//url -. donde se cargaran los dato
+			//metodo -. l aforma en k enviaremos los datos
+			//funcion -. lafuncion que llamremos apra ralizar
+			peticion.onreadystatechange()=funcion;
+			peticion.open(metodo,url,true);
+			peticion.send(null);
+		}
+		function descargarArchivo()
+		{
+			iniciar();
+			realizar_peticion('Ejem_ajax.txt','GET',actuador);
+		}
+		function actuador()
+		{
+			if(peticion.readyState == 4 )
+				if(peticion.status == 200)
+					document.write(peticion.responseText);
+		}
+		window.onload=descargarArchivo;
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

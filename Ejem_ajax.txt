@@ -1,0 +1,1 @@
+esto es lo ue debria de mostrar apenas cargue la pagina que esta en otro archivo totalmente fuera del codigo html

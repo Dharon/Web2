@@ -1,0 +1,18 @@
+#d1{
+
+	width: 30%;
+	height: 50%;
+	background-color: silver;
+	float: left;
+}
+#d2{
+
+	width: 70%;
+	height: 50%;
+	background-color: skyblue;
+	float: left;
+}
+.ocultar{
+
+	display: none;
+}
